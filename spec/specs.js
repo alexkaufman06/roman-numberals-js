@@ -34,4 +34,12 @@ describe("romanNumeral", function() {
   it("returns the roman numeral for one-thousand four-hundred", function() {
     expect(romanNumeral(1400)).to.equal("MCD")
   });
+
+  it("returns the roman numeral for nine-hundred ninety-nine", function() {
+    expect(romanNumeral(999)).to.equal("CMXCIX")
+  });
+
+  it("returns the roman numeral for four-hundred fourty-four", function() {
+    expect(romanNumeral(444)).to.equal("CDXLIV")
+  });
 });
