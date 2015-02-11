@@ -1,17 +1,13 @@
 var romanNumeral = function(number) {
-  while (number >= 1000) {
-    return "M";
-  } while (number >= 500) {
-    return "D";
-  } while (number >= 100) {
-    return "C";
-  } while (number >= 50) {
-    return "L";
-  } while (number >= 10) {
-    return "X";
-  } while (number >= 5) {
-    return "V";
-  } while (number >= 1) {
-    return "I";
-  }
+  var answer = "";
+  var romans = ["M", "D", "C", "L", "X", "V", "I"];
+  var numberValues = [1000,500,100,50,10,5,1]
+
+  for (var i=0; i < romans.length; i++) {
+    while (number >= numberValues[i]) {
+      answer = answer.concat(romans[i]);
+      number -= numberValues[i];
+    }
+  } return answer;
+
 };

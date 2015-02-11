@@ -26,4 +26,12 @@ describe("romanNumeral", function() {
   it("returns the roman numeral for one", function() {
     expect(romanNumeral(1)).to.equal("I");
   });
+
+  it("returns the roman numeral for one-thousand five-hundred", function() {
+    expect(romanNumeral(1500)).to.equal("MD");
+  });
+
+  it("returns the roman numeral for one-thousand four-hundred", function() {
+    expect(romanNumeral(1400)).to.equal("MCD")
+  });
 });
